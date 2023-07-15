@@ -153,67 +153,28 @@ import kepllarLogo from "../keplr-logo.png";
     
     return (
       <>
-        <button onClick={connectWallet} className="btn btn-primary mt-2">
-          {walletAddress}
-        </button>
-        <div className="container-sm ">
-          <div className="row">
-            <div className="col p-5">
-              <img
-                src={kepllarLogo}
-                alt=""
-                style={{ maxWidth: "200px", margin: "auto", display: "block" }}
-              />
-            </div>
-          </div>
-          {transactionHash ? (
-            <>
-              <h5 style={{ textAlign: "center" }}>Amount: {amount}</h5>
-              <h5 style={{ textAlign: "center" }}>
-                Transaction Hash: {transactionHash}
-              </h5>
-            </>
-          ) : (
-            ""
-          )}
-          <div className="card ">
-            <div className="card-header">Send Amount</div>
-            <div className="card-body">
-              <b>Address:</b>
-              <div id="address"></div>
-              <form name="sendForm" onSubmit={(e) => handleSubmit(e)}>
-                <div className="form-group">
-                  <label htmlFor="recipient">Recipient</label>
-                  <input
-                    className="form-control"
-                    id="recipient"
-                    name="recipient"
-                    value={recipient}
-                    onChange={(e) => setReceipent(e.target.value)}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="amount">Amount</label>
-                  <div className="input-group">
-                    <input
-                      className="form-control"
-                      id="amount"
-                      name="amount"
-                      value={amount}
-                      onChange={(e) => setAmount(e.target.value)}
-                    />
-                    <div className="input-group-append">
-                      <div className="input-group-text">KUJI</div>
-                    </div>
-                  </div>
-                </div>
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+        <div class="wrapper">
+    <h1>Kujira Crypto Token Swap</h1>
+    <span>-------------------------------</span>
+
+    <form>
+        <select name="currencyFrom" id="currencyFrom">
+            <option value="">-- Select a currency --</option>
+            <option value="BTC">BTC</option>
+        </select>
+        <input type="number" name="amountFrom" id="amountFrom">
+        <select name="currencyTo" id="currencyTo">
+            <option value="">-- Select a currency --</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="BTC">BTC</option>
+            <option value="ETH">ETH</option>
+        </select>
+    </form>
+
+    <p id="result">Select any token and an amount to swap</p>
+</div>
+
       </>
     );
   }

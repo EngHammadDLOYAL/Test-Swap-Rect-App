@@ -36,3 +36,88 @@
     transform: rotate(360deg);
   }
 }
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    color: lighten(#ff145a, 10%);
+}
+
+h1,
+p,
+a,
+span,
+input,
+select,
+option {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+$color-primary: #0D6EFD;
+$color-secondary: #fff;
+
+body {
+    transition: background 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    
+    h1 {
+        margin-bottom: 10px;
+        color: $color-primary;
+    }
+    
+    form {
+        display: flex;
+        
+        input,
+        select {
+            border: 0;
+            background: $color-primary;
+            padding: 10px;
+            color: #fff;
+            
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            
+            &:focus {
+                outline: 0;
+            }
+        }
+        
+        option {
+            
+            &:selected {
+                background: $color-secondary;
+            }
+            
+         
+        }
+    }
+    
+    p,
+    span {
+        color: #000000;
+    }
+    
+    span {
+        margin-bottom: 50px;
+    }
+}
