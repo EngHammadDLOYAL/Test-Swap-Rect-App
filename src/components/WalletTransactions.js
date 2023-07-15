@@ -166,7 +166,7 @@ import kepllarLogo from "../keplr-logo.png";
           </div>
       </div>
       <div class="card ">
-         <div class="card-header">Kujira Crypto Token Swap</div>
+         <div class="card-header">Kujira Crypto Token Swap.</div>
          <div class="card-body">
             <b>Address:</b>
             <div id="address"></div>
