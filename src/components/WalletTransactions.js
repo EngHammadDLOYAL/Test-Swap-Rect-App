@@ -153,35 +153,59 @@ import kepllarLogo from "../keplr-logo.png";
     
     return (
       <>
-        <div class="wrapper">
-    <h1>Kujira Crypto Token Swap</h1>
-    <span>-------------------------------</span>
-
-    <form>
-        <select name="currencyFrom" id="currencyFrom">
-            <option value="">-- Select a currency --</option>
-            <option value="BTC">BTC</option>
-        </select>
-        <input
-                      type="number"
+        
+   <button class="btn btn-primary mt-2">Connect Wallet</button>
+   <div class="container-sm ">
+      <div class="row">
+         <div class="col p-5">
+         <img
+                src={kepllarLogo}
+                alt=""
+                style={{ maxWidth: "200px", margin: "auto", display: "block" }}
+              />
+          </div>
+      </div>
+      <div class="card ">
+         <div class="card-header">Kujira Crypto Token Swap</div>
+         <div class="card-body">
+            <b>Address:</b>
+            <div id="address"></div>
+            <form name="sendForm">
+               <div class="row" style="
+                  margin-bottom: 30px;
+                  ">
+                  <div class="form-group col-4">
+                     <label for="recipient">From</label>
+                     <select class="form-control" name="currencyFrom" id="currencyFrom">
+                        <option value="">-- Select Kujira Token--</option>
+                        <option value="BTC">BTC</option>
+                     </select>
+                  </div>
+                  <div class="form-group col-4">
+                     <label for="amount">Amount</label>
+                     <div class="input-group">
+                     <input
                       className="form-control"
-                      id="amountFrom"
-                      name="amountFrom"
+                      id="amount"
+                      name="amount"
                       value={amount}
                       onChange={(e) => setAmount(e.target.value)}
                     />
-        
-        <select name="currencyTo" id="currencyTo">
-            <option value="">-- Select a currency --</option>
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="BTC">BTC</option>
-            <option value="ETH">ETH</option>
-        </select>
-    </form>
-
-    <p id="result">Select any token and an amount to swap</p>
-</div>
+                     </div>
+                  </div>
+                  <div class="form-group col-4">
+                     <label for="amount">To</label>
+                     <select class="form-control" name="currencyFrom" id="currencyFrom">
+                        <option value="">-- Select Kujira Token--</option>
+                        <option value="BTC">BTC</option>
+                     </select>
+                  </div>
+               </div>
+               <button type="submit" class="btn btn-primary">Swap</button>
+            </form>
+         </div>
+      </div>
+   </div>
 
       </>
     );
