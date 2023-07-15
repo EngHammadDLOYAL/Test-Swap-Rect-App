@@ -162,7 +162,15 @@ import kepllarLogo from "../keplr-logo.png";
             <option value="">-- Select a currency --</option>
             <option value="BTC">BTC</option>
         </select>
-        <input type="number" name="amountFrom" id="amountFrom">
+        <input
+                      type="number"
+                      className="form-control"
+                      id="amountFrom"
+                      name="amountFrom"
+                      value={amount}
+                      onChange={(e) => setAmount(e.target.value)}
+                    />
+        
         <select name="currencyTo" id="currencyTo">
             <option value="">-- Select a currency --</option>
             <option value="USD">USD</option>
